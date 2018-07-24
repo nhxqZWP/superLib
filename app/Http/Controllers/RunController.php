@@ -7,8 +7,5 @@ use App\Service\StrategyService;
 
 class RunController extends Controller
 {
-    public function runOne(StrategyService $strategyService, OrderService $orderService)
-    {
 
-    }
 }
