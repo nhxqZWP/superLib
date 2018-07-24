@@ -11,7 +11,7 @@ class StrategyService
     public function StrategyOne($platform = 'binance', $symbol = 'BTC/USDT')
     {
 
-        //return type price amount
-        return ['', '', ''];
+        //return ope
+        return null;
     }
 }
