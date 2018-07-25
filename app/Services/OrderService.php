@@ -4,11 +4,19 @@ namespace App\Service;
 
 class OrderService
 {
-    public function placeOrder($platform = null, $price = null, $amountPercent = 1)
+    public function placeNormalOrder($ope = null, $platform = null, $symbol = null, $amountPercent = 1)
     {
-        if (is_null($platform) || is_null($price)) {
+        if (is_null($ope) || is_null($platform) || is_null($symbol)) {
             return null;
         }
+
+    }
+
+    public function placeMarketOrder($ope = null, $platform = null, $symbol = null)
+    {
+         if (is_null($ope) || is_null($platform) || is_null($symbol)) {
+              return null;
+         }
 
     }
 }
