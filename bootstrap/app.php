@@ -59,6 +59,8 @@ $app->singleton(
 |
 */
 
+//$app->configure('run');
+
 // $app->middleware([
 //    App\Http\Middleware\ExampleMiddleware::class
 // ]);

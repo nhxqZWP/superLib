@@ -8,7 +8,7 @@ class RunService
 {
     public function runOne(StrategyService $strategyService, OrderService $orderService)
     {
-        $config = ExamCardsConstant::CONFIG_ONE;
+        $config = config('run');
         $getPlatform = $config['get_platform'];
         $getPlatformCoin = $config['get_platform_coin'];
         $trades = $config['do_trade'];
