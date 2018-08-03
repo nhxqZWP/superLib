@@ -1,38 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-use ccxt\bittrex;
+
+use App\Service\RunService;
 
 class ExampleController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function example(RunService $runService)
     {
-        //
-    }
 
-    public function example()
-    {
-         $id = 'bittrex';
-         $symbol = 'ETH/BTC';
+         $res = $runService->runOne();
 
-// instantiate the exchange by id
-         $exchange = '\\ccxt\\' . $id;
-         $exchange = new $exchange (array (
-              'enableRateLimit' => true,
-         ));
-
-// OHLCV format by default
-         $ohlcv = $exchange->fetch_ohlcv ($symbol);
-         print_r($ohlcv);
-dd(1);
-// convert OHLCV → TradingView
-         $trading_view = $exchange->convert_ohlcv_to_trading_view ($ohlcv);
-         return 'ok';
+//         $id = 'coinex';
+//         $symbol = 'BTC/USDT';
+//
+//// instantiate the exchange by id
+//         $exchange = '\\ccxt\\' . $id;
+//         $exchange = new $exchange ();
+//
+//// OHLCV format by default
+//         $ohlcv = $exchange->fetch_ticker ($symbol);
+//         print_r($ohlcv);
+//dd(1);
+//// convert OHLCV → TradingView
+//         $trading_view = $exchange->convert_ohlcv_to_trading_view ($ohlcv);
+//         return 'ok';
     }
 
     /**

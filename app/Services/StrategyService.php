@@ -2,16 +2,13 @@
 
 namespace App\Service;
 
-use App\Traits\SingletonTrait;
-
 class StrategyService
 {
-    use SingletonTrait;
+     //只返回买卖操作
+     public function StrategyOne($platform = 'binance', $symbol = 'BTC/USDT')
+     {
 
-    public function StrategyOne($platform = 'binance', $symbol = 'BTC/USDT')
-    {
-
-        //return ope
-        return null;
-    }
+          //return no ope
+          return null;
+     }
 }
