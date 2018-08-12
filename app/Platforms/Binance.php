@@ -94,7 +94,8 @@ class Binance
      */
     private function setupApiConfigFromFile(string $file = null)
     {
-        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
+        $file = is_null($file) ? getenv("HOME").'/CoinStrategy/superLib/public/test.json' : $file;
+//        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
 
         if (empty($this->api_key) === false || empty($this->api_key) === false) {
             return;
@@ -119,7 +120,7 @@ class Binance
      */
     private function setupCurlOptsFromFile(string $file = null)
     {
-        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
+        $file = is_null($file) ? getenv("HOME").'/CoinStrategy/superLib/public/test.json' : $file;
 
         if (count($this->curlOpts) > 0) {
             return;
@@ -142,7 +143,7 @@ class Binance
      */
     private function setupProxyConfigFromFile(string $file = null)
     {
-        $file = is_null($file) ? getenv("HOME") . "/.config/jaggedsoft/php-binance-api.json" : $file;
+        $file = is_null($file) ? getenv("HOME").'/CoinStrategy/superLib/public/test.json' : $file;
 
         if (is_null($this->proxyConf) === false) {
             return;
@@ -162,6 +163,7 @@ class Binance
         if (isset($contents['port']) === false) {
             return;
         }
+
         $this->proxyConf['proto'] = $contents['proto'];
         $this->proxyConf['address'] = $contents['address'];
         $this->proxyConf['port'] = $contents['port'];
